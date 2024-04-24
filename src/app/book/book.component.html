@@ -1,0 +1,92 @@
+<!--<div class="container">-->
+<!--  <div class="row">-->
+<!--    <div class="col-sm-12">-->
+<!--      <table class="table table-bordered">-->
+<!--        <thead>-->
+<!--        <tr>-->
+<!--          <th scope="col" class="text text-center" style="background-color: gold">Task Name</th>-->
+<!--          <th scope="col" class="text text-center" style="background-color: gold">Description</th>-->
+<!--          <th scope="col"class="text text-center" style="background-color: gold">Deadline</th>-->
+<!--          <th scope="col" w-auto style="background-color: gold" class="bi bi-trash"></th>-->
+<!--          <th scope="col" w-auto style="background-color: gold"></th>-->
+<!--        </tr>-->
+<!--        <tr *ngFor="let students of Task; let i = index">-->
+<!--          <td>{{students.taskName}}</td>-->
+<!--          <td>{{students.description}}</td>-->
+<!--          <td>{{students.deadline}}</td>-->
+<!--          <td><button class="btn btn-outline-info" (click)="udT(i)">Update</button></td>-->
+<!--          <td><button class="btn btn-outline-danger" (click)="onDelete()">Delete</button></td>-->
+<!--        </tr>-->
+<!--        </thead>-->
+<!--      </table>-->
+<!--    </div>-->
+<!--    <div class="row">-->
+<!--      <div class="col-xs-6">-->
+<!--        <h4>Add New Tasks</h4>-->
+<!--        <form (ngSubmit)="addTask()">-->
+<!--          <div>-->
+<!--            <label for="taskName">Task Name:</label>-->
+<!--            <input class="form-check" type="text" id="taskName" [(ngModel)]="newWorkTasksList.taskName" name="taskName"-->
+<!--                   required>-->
+<!--          </div>-->
+<!--          <div>-->
+<!--            <label for="description">Description:</label>-->
+<!--            <input class="form-check" type="text" id="description" [(ngModel)]="newWorkTasksList.description"-->
+<!--                   name="description" required>-->
+<!--          </div>-->
+<!--          <div>-->
+<!--            <label for="deadline">Deadline:</label>-->
+<!--            <input class="form-check" type="datetime-local" id="deadline" [(ngModel)]="newWorkTasksList.deadline"-->
+<!--                   name="deadline" required>-->
+<!--          </div>-->
+<!--          <button class="btn btn-outline-success mt-2" type="submit">Add Task</button>-->
+<!--        </form>-->
+<!--      </div>-->
+<!--      <br><br>-->
+<!--      <hr>-->
+<!--      <div class="col-xs-6">-->
+<!--        <div class="col-xs-6">-->
+<!--          <input type="text" [(ngModel)]="searchTerm" placeholder="Search">-->
+<!--          <button class="btn btn-outline-primary mb-3" (click)="fT()">Filter</button>-->
+
+<!--          <ul>-->
+<!--            <li *ngFor="let item of filteredT">-->
+<!--              {{ item.taskName }} </li>-->
+<!--          </ul>-->
+
+<!--        </div>-->
+<!--        <div class="col-xs-12">-->
+<!--          <button class="btn btn-outline-info">Display Tasks</button>-->
+<!--        </div>-->
+
+
+<!--        <li *ngFor="let ts of filteredT; let i = index">-->
+<!--          {{ts.taskName}}-->
+<!--          <button class="btn btn-outline-info" (click)="udT(i)">Update</button>-->
+<!--        </li>-->
+
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+<!--<hr>-->
+
+<!--<h2>Tasks List</h2>-->
+<!--<ul *ngIf="Task.length > 0">-->
+<!--  <li *ngFor="let tasks of Task">-->
+<!--    {{ tasks.taskName }} - {{ tasks.description }} - {{ tasks.deadline }}-->
+<!--  </li>-->
+<!--</ul>-->
+<!--<p *ngIf="Task.length === 0">No tasks added yet.</p>-->
+
+
+<!--<div class="col-xs-12">-->
+<!--  <button class="btn btn-outline-danger mb-3">Delete Tasks</button>-->
+<!--</div>-->
+<!--<div class="col-xs-12">-->
+<!--  <button class="btn btn-outline-primary mb-3">Filter Tasks</button>-->
+<!--</div>-->
+<!--<div class="col-xs-12">-->
+<!--  <button class="btn btn-outline-info">Display Tasks</button>-->
+<!--</div>-->
+<!--<hr>-->

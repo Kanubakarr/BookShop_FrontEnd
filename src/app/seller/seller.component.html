@@ -1,0 +1,57 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+
+      <table class="table table-bordered">
+  <thead>
+  <tr>
+    <th scope="col" class="text text-center" style="background-color: gold">Book id</th>
+    <th scope="col" class="text text-center" style="background-color: gold">Title</th>
+    <th scope="col" class="text text-center" style="background-color: gold">Author</th>
+    <th scope="col" class="text text-center" style="background-color: gold">Price</th>
+    <th scope="col" class="text text-center" style="background-color: gold">Quantity</th>
+    <th scope="col" class="text text-center" style="background-color: gold">Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let book of books; let i = index">
+    <td>{{ book.bookId }}</td>
+    <td>{{ book.title }}</td>
+    <td>{{ book.author }}</td>
+    <td>NLE{{ book.price }}</td>
+    <td>{{ book.quantity }}</td>
+    <td>
+      <button class="btn btn-outline-info" (click)="updateBook(i)">Update</button>
+      <button class="btn btn-outline-danger" (click)="deleteBook(i)">Delete</button>
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+
+<div>
+  <label for="bookId">bookId:</label>
+  <input class="form-check" #bookId="ngModel" [(ngModel)]="newBook.bookId" id="id" name="id" required type="number">
+
+  <label for="Title">Title:</label>
+  <input class="form-check" #title="ngModel" [(ngModel)]="newBook.title" appForbiddenName="zzz" id="title" minlength="4" name="title"
+         required type="text">
+
+  <label for="Author">Author:</label>
+  <input class="form-check" #author="ngModel" [(ngModel)]="newBook.author" appForbiddenName="yyy" id="author" minlength="4"
+         required author="author" type="text">
+
+  <label for="Price">Price:</label>
+  <input class="form-check" #price="ngModel" [(ngModel)]="newBook.price" appForbiddenName="zzz" id="price" minlength="4" name="price"
+         required type="number">
+
+  <label for="Quantity">Quantity:</label>
+  <input class="form-check" #quantity="ngModel" [(ngModel)]="newBook.quantity" appForbiddenName="yyy" id="quantity" minlength="4"
+         required quantity="quantity" type="number">
+  <br>
+
+  <button class="btn btn-outline-success" (click)="addBook()">Add Book</button>
+</div>
+    </div>
+  </div>
+</div>
